@@ -37,7 +37,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between" style={{ padding: "20px 20px" }}>
         {/* Logo */}
         <a href="#" className="t-display text-xl font-bold text-white sm:text-2xl">
-          Horosco<span className="gradient-text">PoP</span>
+          Horósco<span className="gradient-text">PoP</span>
         </a>
 
         {/* Desktop links */}

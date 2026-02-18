@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
           <a href="#" className="t-display text-2xl font-bold text-white">
-            Horosco<span className="gradient-text">PoP</span>
+            Horósco<span className="gradient-text">PoP</span>
           </a>
 
           {/* Tagline */}
@@ -44,6 +44,19 @@ export default function Footer() {
           {/* Copyright */}
           <p className="t-mono text-[11px] text-cosmic-gray/60">
             {FOOTER.copyright}
+          </p>
+
+          {/* Developer credit */}
+          <p className="t-mono text-sm text-white" style={{ marginTop: 24 }}>
+            Developed by{" "}
+            <a
+              href="https://www.wabyte.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white underline decoration-white/30 underline-offset-2 transition-colors hover:decoration-white"
+            >
+              www.wabyte.net
+            </a>
           </p>
         </div>
       </div>
