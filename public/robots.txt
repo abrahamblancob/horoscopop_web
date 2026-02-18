@@ -1,0 +1,7 @@
+# HoroscoPoP - robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://www.horoscopop.app/sitemap.xml

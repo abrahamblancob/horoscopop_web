@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Playfair_Display, DM_Sans, Space_Mono } from "next/font/google";
+import StructuredData from "@/components/StructuredData";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -25,18 +26,33 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HoroscoPoP — Tu cosmos, cada día",
+  metadataBase: new URL("https://www.horoscopop.app"),
+  title: {
+    default: "HoroscoPoP — Tu cosmos, cada día",
+    template: "%s | HoroscoPoP",
+  },
   description:
-    "Horóscopo diario personalizado basado en tránsitos planetarios reales. Powered by Astral PoP Engine™. Descarga gratis.",
+    "Horóscopo diario personalizado basado en tránsitos planetarios reales. Powered by Astral PoP Engine™. Descarga gratis para iOS y Android.",
   keywords: [
     "horóscopo",
     "horóscopo diario",
+    "horóscopo de hoy",
     "astrología",
     "signos zodiacales",
     "predicción diaria",
     "horoscopop",
+    "horóscopo personalizado",
+    "tránsitos planetarios",
+    "fase lunar",
+    "carta astral",
+    "zodíaco",
   ],
   authors: [{ name: "HoroscoPoP" }],
+  creator: "HoroscoPoP",
+  publisher: "HoroscoPoP",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "HoroscoPoP — Tu cosmos, cada día",
     description:
@@ -45,20 +61,38 @@ export const metadata: Metadata = {
     siteName: "HoroscoPoP",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HoroscoPoP — Horóscopo diario personalizado",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "HoroscoPoP — Tu cosmos, cada día",
     description:
-      "Horóscopo diario personalizado basado en tránsitos planetarios reales.",
+      "Horóscopo diario personalizado basado en tránsitos planetarios reales. Powered by Astral PoP Engine™.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
+  category: "lifestyle",
 };
 
 export default function RootLayout({
@@ -103,6 +137,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <StructuredData />
         {children}
       </body>
     </html>
