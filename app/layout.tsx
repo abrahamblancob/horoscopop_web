@@ -92,6 +92,17 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "HoroscoPoP",
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+    "theme-color": "#0A0A12",
+    "msapplication-TileColor": "#0A0A12",
+  },
   category: "lifestyle",
 };
 

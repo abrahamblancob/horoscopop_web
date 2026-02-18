@@ -1,0 +1,21 @@
+{
+  "name": "HoroscoPoP — Tu cosmos, cada día",
+  "short_name": "HoroscoPoP",
+  "description": "Horóscopo diario personalizado basado en tránsitos planetarios reales. Powered by Astral PoP Engine™.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0A0A12",
+  "background_color": "#0A0A12",
+  "orientation": "portrait",
+  "lang": "es",
+  "categories": ["lifestyle", "entertainment"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
