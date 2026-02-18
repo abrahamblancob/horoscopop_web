@@ -8,6 +8,60 @@ import { ZODIAC_SIGNS } from "@/lib/zodiac";
 export default function Hero() {
   return (
     <section className="gradient-main relative z-10 flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-5 pb-12 pt-24 text-center sm:px-8 sm:pt-28">
+      {/* Stars background */}
+      <div className="pointer-events-none absolute inset-0">
+        {[
+          { top: "5%", left: "8%", size: 2, delay: 0, duration: 3 },
+          { top: "12%", left: "25%", size: 1.5, delay: 1.2, duration: 4 },
+          { top: "8%", left: "45%", size: 2.5, delay: 0.5, duration: 3.5 },
+          { top: "15%", left: "68%", size: 1.5, delay: 2, duration: 4.5 },
+          { top: "6%", left: "82%", size: 2, delay: 0.8, duration: 3 },
+          { top: "10%", left: "92%", size: 1, delay: 1.5, duration: 5 },
+          { top: "22%", left: "5%", size: 1.5, delay: 2.5, duration: 4 },
+          { top: "28%", left: "15%", size: 2, delay: 0.3, duration: 3.5 },
+          { top: "20%", left: "38%", size: 1, delay: 1.8, duration: 4.5 },
+          { top: "25%", left: "55%", size: 2.5, delay: 0.7, duration: 3 },
+          { top: "18%", left: "75%", size: 1.5, delay: 2.2, duration: 5 },
+          { top: "30%", left: "88%", size: 2, delay: 1, duration: 3.5 },
+          { top: "35%", left: "3%", size: 1, delay: 0.4, duration: 4 },
+          { top: "42%", left: "12%", size: 2, delay: 1.6, duration: 3 },
+          { top: "38%", left: "30%", size: 1.5, delay: 2.8, duration: 4.5 },
+          { top: "45%", left: "50%", size: 1, delay: 0.9, duration: 5 },
+          { top: "40%", left: "72%", size: 2.5, delay: 1.3, duration: 3.5 },
+          { top: "48%", left: "90%", size: 1.5, delay: 2.1, duration: 4 },
+          { top: "55%", left: "7%", size: 2, delay: 0.6, duration: 3 },
+          { top: "60%", left: "22%", size: 1, delay: 1.9, duration: 4.5 },
+          { top: "58%", left: "42%", size: 2, delay: 2.4, duration: 3.5 },
+          { top: "52%", left: "63%", size: 1.5, delay: 0.2, duration: 5 },
+          { top: "62%", left: "80%", size: 2, delay: 1.7, duration: 3 },
+          { top: "56%", left: "95%", size: 1, delay: 2.6, duration: 4.5 },
+          { top: "70%", left: "10%", size: 1.5, delay: 1.1, duration: 4 },
+          { top: "75%", left: "28%", size: 2, delay: 0.1, duration: 3.5 },
+          { top: "68%", left: "48%", size: 1, delay: 2.3, duration: 5 },
+          { top: "72%", left: "65%", size: 2.5, delay: 0.8, duration: 3 },
+          { top: "78%", left: "85%", size: 1.5, delay: 1.4, duration: 4.5 },
+          { top: "82%", left: "4%", size: 2, delay: 2.7, duration: 3.5 },
+          { top: "88%", left: "18%", size: 1, delay: 0.5, duration: 4 },
+          { top: "85%", left: "35%", size: 1.5, delay: 1.8, duration: 3 },
+          { top: "90%", left: "58%", size: 2, delay: 2.9, duration: 5 },
+          { top: "86%", left: "76%", size: 1, delay: 0.3, duration: 4.5 },
+          { top: "92%", left: "92%", size: 2, delay: 1.6, duration: 3.5 },
+        ].map((star, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              top: star.top,
+              left: star.left,
+              width: star.size,
+              height: star.size,
+              opacity: 0.15 + Math.random() * 0.35,
+              animation: `twinkle ${star.duration}s ease-in-out ${star.delay}s infinite`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Floating glow orbs (brand guide) */}
       <div
         className="pointer-events-none absolute -right-24 -top-48 h-[600px] w-[600px] opacity-60"
