@@ -76,7 +76,7 @@ export const HERO = {
 
 export const DOWNLOAD_CTA = {
   title: "¿Listo para descubrir lo que los astros tienen para ti?",
-  subtitle: "Descarga gratis. Sin registro. Tu horóscopo te espera cada mañana.",
+  subtitle: "Descarga gratis. Tu horóscopo te espera cada mañana.",
 };
 
 export const FOOTER = {

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1033"/>
+      <stop offset="100%" style="stop-color:#0A0A1A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="65%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#7B2FFF;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7B2FFF;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="orbit1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD166;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FF6B9D;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="planet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD166"/>
+      <stop offset="50%" style="stop-color:#FFAA88"/>
+      <stop offset="100%" style="stop-color:#FF6B9D"/>
+    </linearGradient>
+    <radialGradient id="planetGlow" cx="40%" cy="35%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF5E0;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#FFD166;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+  <!-- Purple glow -->
+  <rect width="512" height="512" rx="108" fill="url(#glow)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="200" r="3" fill="#fff" opacity="0.4"/>
+  <circle cx="420" cy="380" r="3" fill="#fff" opacity="0.3"/>
+  <circle cx="100" cy="400" r="2.5" fill="#fff" opacity="0.35"/>
+  <!-- Letter P -->
+  <text x="256" y="340" font-family="Georgia, 'Times New Roman', serif" font-size="320" font-weight="700" fill="#FFFFFF" text-anchor="middle">P</text>
+  <!-- Orbit ring -->
+  <ellipse cx="300" cy="240" rx="140" ry="100" fill="none" stroke="url(#orbit1)" stroke-width="5" transform="rotate(-25, 300, 240)" opacity="0.7"/>
+  <!-- Planet -->
+  <circle cx="390" cy="150" r="28" fill="url(#planet)"/>
+  <circle cx="390" cy="150" r="28" fill="url(#planetGlow)"/>
+  <!-- Planet glow effect -->
+  <circle cx="390" cy="150" r="40" fill="none" stroke="#FFD166" stroke-width="1" opacity="0.2"/>
+</svg>

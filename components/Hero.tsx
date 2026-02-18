@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { HERO } from "@/lib/constants";
 import { ZODIAC_SIGNS } from "@/lib/zodiac";
@@ -26,6 +27,31 @@ export default function Hero() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-3xl">
+        {/* App icon */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center" style={{ marginBottom: 32 }}
+        >
+          <div className="relative">
+            {/* Glow behind icon */}
+            <div
+              className="pointer-events-none absolute -inset-6"
+              style={{ background: "radial-gradient(circle, rgba(123,47,255,0.3) 0%, transparent 70%)" }}
+            />
+            <Image
+              src="/favicon.svg"
+              alt="HoroscoPoP"
+              width={100}
+              height={100}
+              className="relative sm:h-[120px] sm:w-[120px]"
+              style={{ width: 100, height: 100 }}
+              priority
+            />
+          </div>
+        </motion.div>
+
         {/* Zodiac ring */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -73,8 +99,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="t-body mx-auto mt-6 max-w-lg text-base text-silver-mist sm:mt-8 sm:text-lg md:max-w-xl"
-          style={{ lineHeight: 1.7 }}
+          className="t-body mx-auto mt-6 max-w-lg text-center text-base text-silver-mist sm:mt-8 sm:text-lg md:max-w-xl"
+          style={{ lineHeight: 1.7, margin: "1.5rem auto 0" }}
         >
           {HERO.subtitle}
         </motion.p>
@@ -84,14 +110,31 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center sm:gap-4"
+          className="flex w-full flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6"
+          style={{ marginTop: 32, padding: "0 12px" }}
         >
-          <a href="#download" className="btn-cta w-full px-10 py-4 text-base sm:w-auto sm:text-lg">
+          <a
+            href="#download"
+            className="inline-flex w-full items-center justify-center rounded-2xl text-base font-semibold text-white transition-transform hover:scale-[1.02] sm:w-auto sm:text-lg"
+            style={{
+              padding: "24px 56px",
+              gap: 20,
+              background: "linear-gradient(135deg, #7B2FFF 0%, #FF6B9D 100%)",
+              boxShadow: "0 8px 32px rgba(123,47,255,0.3)",
+            }}
+          >
             {HERO.cta}
           </a>
           <a
             href="#features"
-            className="btn-secondary w-full px-10 py-4 text-base sm:w-auto sm:text-lg"
+            className="inline-flex w-full items-center justify-center rounded-2xl text-base font-semibold text-stardust transition-transform hover:scale-[1.02] sm:w-auto sm:text-lg"
+            style={{
+              padding: "24px 56px",
+              gap: 20,
+              background: "rgba(123,47,255,0.08)",
+              border: "1.5px solid rgba(123,47,255,0.3)",
+              boxShadow: "0 4px 20px rgba(123,47,255,0.1)",
+            }}
           >
             Conoce más
           </a>
